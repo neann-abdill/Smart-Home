@@ -1,17 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartHome</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Smart Home</title>
 </head>
+
 <body class="bg-black">
-    <header>
-        <nav>
-            
+    <header style="z-index: 999;" class="fixed w-full flex justify-center z-[999]" id="nav">
+        <nav
+            class="bg-blue-500/60 backdrop-blur-md border border-white/20 flex justify-between w-full max-w-[1440px] py-5 items-center text-white px-10">
+            <div id="menu-overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+            <ul class="gap-6 hidden md:flex">
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#Features">
+                        Features
+                    </a>
+                </li>
+                <li>
+                    <a href="#Testimonials">
+                        Testimonials
+                    </a>
+                </li>
+            </ul>
+            <img class="w-fit h-fit" src="/assets/Logo.svg" />
+            <button class="md:block bg-white text-black rounded-sm hidden px-9 py-4">
+                Download App
+            </button>
+            <div id="hamburger" class="flex flex-col md:hidden cursor-pointer justify-between w-[40px] h-[40px] gap-1">
+                <div class="flex-1 bg-white"></div>
+                <div class="flex-1 bg-white"></div>
+                <div class="flex-1 bg-white"></div>
+            </div>
         </nav>
+        <div id="mobile-menu"
+            class="fixed h-full w-full bg-[#1E5AFA] transform -translate-x-full transition-transform duration-300 ease-in-out z-50 p-10 flex flex-col gap-8">
+            <button id="close-menu" class="text-white text-right text-4xl">
+                X
+            </button>
+            <div class="flex flex-col justify-center h-100 gap-6">
+                <ul class="flex flex-col gap-6 text-white text-3xl text-center items-center">
+                    <li">
+                        <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#Features">Features</a>
+                        </li>
+                        <li>
+                            <a href="#Testimonials">Testimonials</a>
+                        </li>
+                </ul>
+                <button class="bg-white text-black rounded-md px-9 py-4">
+                    Download App
+                </button>
+            </div>
+        </div>
+        <div class="fixed inset-0 bg-black/50 hidden z-40" id="menu-overlay"></div>
     </header>
-    
+    <section id="home" class="flex flex-col justify-start items-center h-screen gap-5 py-20  bg-[#1E5AFA] pt-40">
+        <h1 class="text-7xl md:text-6xl text-white font-bold text-center">
+            Take Full Control <br /> of Your Home
+        </h1>
+        <p class="text-xs md:text-lg text-white text-center">
+            Manage your appliances, monitor energy, and create a safer, smarter living space. <br />
+            All from your phone.
+        </p>
+        <img src="/assets/Hero Image.png"
+            class="w-full absolute right-[50%] top-[80%] md:top-[50%] translate-x-[50%]" />
+        <div class="flex justify-start h-full items-end w-full">
+            <div class="flex flex-col px-3 md:gap-10 gap-4 w-8 md:w-10">
+                <img src="/assets/facebook.svg" />
+                <img src="/assets/instagram.svg" />
+                <img src="/assets/twitter.svg" />
+                <img src="/assets/linkedin.svg" />
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col items-center justify-center md:justify-end bg-white h-70 md:h-150 gap-8">
+        <div class="flex gap-4 md:gap-20 w-70 md:w-120">
+            <a href="#">
+                <img class="drop-shadow-2xl" src="assets/app store.png" alt="">
+            </a>
+            <a href="#">
+                <img class="drop-shadow-2xl" src="assets/googleplay.png" alt="">
+            </a>
+        </div>
+    </section>
+    <section class="h-screen bg-white flex flex-col items-center pb-220">
+        <div class="text-center py-20">
+            <h1 id="Features" class="text-4xl md:text-6xl font-bold text-gray-800">Features</h1>
+        </div>
+        <div class="flex gap-4 items-center flex-col md:flex-row">
+            <div class="p-4 w-1/2">
+                <img class="w-140" src="assets/hp-bagian-1.png" alt="">
+            </div>
+            <div class="p-1 w-1/2 flex flex-col justify-center gap-4 items-start">
+                <h1 class="text-lg md:text-3xl font-semibold text-[#000f37]">Everything You Need,<br /> Smarter Than
+                    <br />Ever
+                </h1>
+                <p class="text-xs md:text-base font-normal text-[#575757]">Track today’s energy use, check
+                    temperature,<br />
+                    view device status, and keep an eye on what’s<br /> on — all in one intuitive dashboard.</p>
+                <button class="bg-transparent transition-colors ease-in hover:bg-[#1e5afa] font-normal 
+                hover:cursor-pointer hover:text-white text-xs md:text-base py-2 px-4 border border-black
+                hover:border-transparent rounded">Learn
+                    More
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="h-screen bg-white flex flex-col items-center">
+        <div class="flex gap-4 items-center flex-col md:flex-row-reverse">
+            <div class="p-4 w-1/2">
+                <img class="w-140" src="assets/hp-bagian-2.png" alt="">
+            </div>
+            <div class="p-1 w-1/2 flex flex-col justify-center gap-4 items-start">
+                <h1 class="text-lg md:text-3xl font-semibold text-[#000f37]">Make Your Devices<br /> Work for You
+                </h1>
+                <p class="text-xs md:text-base font-normal text-[#575757]">From lights to air conditioners, the
+                    app<br />
+                    transforms ordinary appliances into smart ones<br />
+                    — programmable, responsive, and more<br />
+                    energy-efficient.
+                </p>
+                <button class="bg-transparent transition-colors ease-in hover:bg-[#1e5afa] font-normal 
+                hover:cursor-pointer hover:text-white text-xs md:text-base py-2 px-4 border border-black
+                hover:border-transparent rounded">Learn
+                    More
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="h-screen bg-white flex flex-col items-center">
+        <div class="flex gap-4 items-center flex-col md:flex-row">
+            <div class="p-4 w-1/2">
+                <img class="w-140" src="assets/hp-bagian-3.png" alt="">
+            </div>
+            <div class="p-1 w-1/2 flex flex-col justify-center gap-4 items-start">
+                <h1 class="text-lg md:text-3xl font-semibold text-[#000f37]">Tap. Control. Relax.
+                </h1>
+                <p class="text-xs md:text-base font-normal text-[#575757]">Turn off forgotten devices, schedule
+                    your<br />
+                    lighting, or monitor active appliances in each<br />
+                    room. Stay in control whether you're home or<br />
+                    away.
+                </p>
+                <button class="bg-transparent transition-colors ease-in hover:bg-[#1e5afa] font-normal 
+                hover:cursor-pointer hover:text-white text-xs md:text-base py-2 px-4 border border-black
+                hover:border-transparent rounded">Learn
+                    More
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col items-center bg-white min-h-screen py-20">
+        <h1 id="Testimonials" class="text-4xl md:text-6xl font-bold text-gray-800 pb-10 md:pb-20">
+            Testimonials
+        </h1>
+        <div class="flex flex-col md:flex-row flex-wrap justify-center w-[90%] md:w-[85%] lg:w-[70%] gap-6">
+
+            <div
+                class="p-6 w-full md:w-fit h-fit flex flex-col justify-center gap-10 items-start bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:bg-white hover:border-none hover:drop-shadow-2xl transition ease-in">
+                <h1 class="text-gray-500 italic font-semibold text-sm md:text-base">
+                    "Finally, I stopped worrying if i left the lamp on. This app<br class="hidden md:block"> gives a
+                    peace of
+                    mind."
+                </h1>
+                <div class="w-fit flex flex-row gap-4">
+                    <img src="/assets/Dennis.svg" alt="Dennis" />
+                    <div class="w-fit flex flex-col">
+                        <p class="text-lg text-blue-950 font-semibold">Dennis</p>
+                        <p class="text-base text-gray-400">A father</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="p-6 w-full md:w-fit h-fit flex flex-col justify-center gap-10 items-start bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:bg-white hover:border-none hover:drop-shadow-2xl transition ease-in">
+                <h1 class="text-gray-500 italic font-semibold">
+                    “Love how I can check my energy use daily. It really helps <br class="hidden md:block" /> with my
+                    bills.”
+                </h1>
+                <div class="w-fit flex flex-row gap-4">
+                    <img src="/assets/carl.svg" alt="Carl" />
+                    <div class="w-fit flex flex-col">
+                        <p class="text-lg text-blue-950 font-semibold">Carl</p>
+                        <p class="text-base text-gray-400">Retired Marine</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="p-6 w-full md:w-115 h-fit flex flex-col justify-center gap-10 items-start bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:bg-white hover:border-none hover:drop-shadow-2xl transition ease-in">
+                <h1 class="text-gray-500 italic font-semibold">
+                    “Feels like living in the future. Everything just works.”
+                </h1>
+                <div class="w-fit flex flex-row gap-4">
+                    <img src="/assets/sam.svg" alt="Sam" />
+                    <div class="w-fit flex flex-col">
+                        <p class="text-lg text-blue-950 font-semibold">Sam</p>
+                        <p class="text-base text-gray-400">Smart Living Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="p-6 w-full md:w-115 h-fit flex flex-col justify-center gap-10 items-start bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:bg-white hover:border-none hover:drop-shadow-2xl transition ease-in">
+                <h1 class="text-gray-500 italic font-semibold">
+                    “This is making everyday tasks 100% easier.”
+                </h1>
+                <div class="w-fit flex flex-row gap-4">
+                    <img src="/assets/Arief.svg" alt="Arief" />
+                    <div class="w-fit flex flex-col">
+                        <p class="text-lg text-blue-950 font-semibold">Arief</p>
+                        <p class="text-base text-gray-400">University Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="h-screen bg-white flex flex-col items-center md:pt-0 pt-60">
+        <h1 class="text-4xl md:text-6xl font-bold text-[#313131] pb-20">
+            FAQ'S
+        </h1>
+        <div class="flex flex-col w-[90%] md:w-[40%] gap-5 px-4 md:px-0">
+            <div class="faq-items bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:cursor-pointer w-full overflow-hidden transition-all duration-300"
+                onclick="toggleFaq(this)">
+                <div class="p-6 flex flex-row items-center gap-4 font-medium text-[#313131]">
+                    <img src="/assets/open.svg" class="w-5 transition-transform duration-300" />
+                    <h1>
+                        Do i need special device to use this app
+                    </h1>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="ml-[36px] px-6 pb-6 text-[#575757] font-normal">
+                        <p>No, as long as you have the app anywhere <br /> you can use it</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-items bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:cursor-pointer w-full overflow-hidden transition-all duration-300"
+                onclick="toggleFaq(this)">
+                <div class="p-6 flex flex-row items-center gap-4 font-medium text-[#313131]">
+                    <img src="/assets/open.svg" class="w-5 transition-transform duration-300" />
+                    <h1>
+                        Can I control my home when I'm not there?
+                    </h1>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="ml-[36px] px-6 pb-6 text-[#575757] font-normal">
+                        <p>Absolutely! As long as you have internet, full <br /> control is in your hands.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-items bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:cursor-pointer w-full overflow-hidden transition-all duration-300"
+                onclick="toggleFaq(this)">
+                <div class="p-6 flex flex-row items-center gap-4 font-medium text-[#313131]">
+                    <img src="/assets/open.svg" class="w-5 transition-transform duration-300" />
+                    <h1>
+                        How do I track power consumption?
+                    </h1>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="ml-[36px] px-6 pb-6 text-[#575757] font-normal">
+                        <p>You can view real-time data and weekly reports <br /> directly in the "Energy" tab of the
+                            app.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-items bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm hover:cursor-pointer w-full overflow-hidden transition-all duration-300"
+                onclick="toggleFaq(this)">
+                <div class="p-6 flex flex-row items-center gap-4 font-medium text-[#313131]">
+                    <img src="/assets/open.svg" class="w-5 transition-transform duration-300" />
+                    <h1>
+                        Is the app free?
+                    </h1>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="ml-[36px] px-6 pb-6 text-[#575757] font-normal">
+                        <p>Yes, the app itself is free but to use it <br /> you need to subscribe
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col items-center bg-white h-screen">
+        <div class="flex flex-col-reverse items-center md:flex-row">
+            <div class="w-[70%] flex flex-col justify-center gap-7 items-start">
+                <h1 class="text-lg md:text-5xl font-bold text-[#575757]">
+                    ready to Smarten <br> Up Your Home?
+                </h1>
+                <p class="text-xs md:text-base font-normal text-[#575757]">
+                    Download now and experience full control at your fingertips.
+                </p>
+                <div class="flex gap-4 md:gap-10 w-70 md:w-100">
+                    <a href="#">
+                        <img src="/assets/app store.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/assets/googleplay.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-1/2">
+                <img src="/assets/hp-bagian-4.png" alt="" class="w-140">
+            </div>
+        </div>
+    </section>
+    <section class="h-fit flex flex-col items-center bg-white">
+        <div
+            class="bg-[#1E5AFA] rounded-lg w-[97%] md:w-[70%] p-8 md:p-15 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
+            <div
+                class="flex flex-col items-center md:items-start gap-3 md:gap-5 font-semibold text-white text-center md:text-left">
+                <h1 class="text-[25px] md:text-[48px] leading-tight">
+                    Subscribe to get updated
+                </h1>
+
+                <p class="font-light text-[11px] md:text-base">
+                    Get tips, new feature alerts, and updates. <br class="hidden md:block"> Straight to your inbox.
+                </p>
+            </div>
+            <button
+                class="w-full md:w-auto h-fit whitespace-nowrap text-white hover:text-black transition-colors ease-in hover:bg-white hover:cursor-pointer border border-white px-9 py-3 rounded">
+                Get started
+            </button>
+        </div>
+    </section>
+    <footer class="flex flex-col items-center bg-white pt-16">
+        <div class="w-[90%] md:w-[70%] grid grid-cols-1 md:grid-cols-3 gap-16 text-[#575757] pb-16">
+            <div class="flex flex-col gap-4">
+                <div class="font-bold text-2xl flex items-center gap-2">
+                    <img src="/assets/Logo-2.svg" alt="">
+                </div>
+                <p class="text-[#575757] text-sm w-70">
+                    Monitor energy use, automate routines, and manage your home appliances effortlessly, all from one
+                    sleek, simple app.
+                </p>
+                <div class="flex flex-row gap-2 mt-2 ">
+                    <input type="email" placeholder="Email Address"
+                        class="w-full px-4 py-2 bg-[#FAFAFA] border border-[#E7EBEE] rounded-sm focus:outline-none">
+                    <button
+                        class="text-[#011037] border border-[#011037] px-4 py-2 rounded-md hover:bg-[#1E5AFA] hover:text-white hover:cursor-pointer transition-colors ease-in">
+                        Register
+                    </button>
+                </div>
+            </div>
+            <div class="md:col-span-2 flex flex-row md:grid-cols-2 md:grid w-full justify-between md:justify-end gap-8">
+                <div class="flex flex-col md:items-center w-1/2 md:w-auto ">
+                    <div class="flex flex-col gap-4">
+                        <h3 class="font-semibold text-black text-lg">
+                            ABOUT
+                        </h3>
+                        <ul class="flex flex-col gap-2 text-[#575757] text-sm">
+                            <li>
+                                <a href="#" class="hover:text-[#1E5AFA]">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#1E5AFA]">Partnerships</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#1E5AFA]">Customer Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              <div class="flex flex-col md:items-center w-1/2 md:w-auto ">
+                    <div class="flex flex-col gap-4">
+                        <h3 class="font-semibold text-black text-lg">
+                            FOLLOW US
+                        </h3>
+                        <ul class="flex flex-col gap-2 text-[#575757] text-sm">
+                            <li>
+                                <a href="#" class="hover:text-[#1E5AFA]">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#1E5AFA]">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#1E5AFA]">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#1E5AFA]">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="w-full text-center text-[#FAFAFA] text-xs bf-[#000F37] py-6">
+                Copyright © 2025 all rights reserved Smart Home
+            </div>
+        </div>
+    </footer>
 </body>
+<script src="/script.js"></script>
+
 </html>
